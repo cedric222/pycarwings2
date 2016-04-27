@@ -287,6 +287,7 @@ class CarwingsLatestClimateControlStatusResponse(CarwingsResponse):
 	def __init__(self, status):
 		CarwingsResponse.__init__(self, status["RemoteACRecords"])
 		racr = status["RemoteACRecords"]
+                self.answer = status
 
 		self._set_cruising_ranges(racr, on_key="CruisingRangeAcOn", off_key="CruisingRangeAcOff")
 
